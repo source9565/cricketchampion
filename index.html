@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Champion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&amp;family=Oswald:wght@700&amp;display=swap" rel="stylesheet">
+  <link href="css/all.min.css" rel="stylesheet">
+  <!-- Meta Pixel Code -->
+
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="hero">
+    <div class="profile-picture">
+      <img style="margin-top: -20px; height: 100px; width: 100px;" src="cricket.jpg" alt="cricket">
+    </div>
+   
+    <div class="content">
+      <h3 class="heading1">Cricket Champion Expert</h3>
+
+      <div class="subscriber-counter">
+        <p id="subscriber-count" style="margin: 18px ;font-size: 25px;font-weight: bold; color: white;"><b>74,028  Subscribers</b></p>
+      </div>
+    </div>
+    
+    <br>
+    <div style="margin: 0px 15px; margin-top: -40px;" class="button">
+      <a href="https://t.me/+gStnj2842aQ5M2Q1" class="btn btn--stripe">
+        Join Cricket Ka Sabse Bada Tipper <i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+    </div>
+    <div class="content-wrapper">
+      <div class="points">
+        <ul>
+          <li><i class="fa-solid fa-share"></i> 34/31 BBL MATCHES PASSED 🏆</li>
+          <li><i class="fa-solid fa-share"></i> 70/68 IPL MATCHES PASSED 🏆</li>
+          <li><i class="fa-solid fa-share"></i> 34/31 WORLD CUP MATCHES PASSED 🏆</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="button">
+      <a href="https://t.me/+gStnj2842aQ5M2Q1" class="btn btn--stripe">
+        SUBSCRIBE FOR FREE <i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+    </div>
+  </div>
+ <script>
+   const targetCount = 74028; // Target subscriber count
+  const duration = 10000; // Duration of the counting effect in milliseconds (e.g., 3 seconds)
+  const displayElement = document.getElementById('subscriber-count');
+  
+  let startTimestamp = null;
+  
+  function countUp(timestamp) {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = timestamp - startTimestamp;
+    const currentCount = Math.min(Math.floor((progress / duration) * targetCount), targetCount);
+    
+    // Format the count with a comma for thousands and display it
+    displayElement.textContent = `${currentCount.toLocaleString()} Subscribers`;
+  
+    if (currentCount < targetCount) {
+      requestAnimationFrame(countUp);
+    }
+  }
+    // Start the animation
+    requestAnimationFrame(countUp);
+ </script>
+
+</body>
+</html>
